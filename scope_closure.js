@@ -31,7 +31,10 @@ let count = 0;
 function counter2() {
   return count++;
 }
+//___________________________Answers___________________________________________
 
+//1.the difference between counter1 and counter2: counter1 is a functional scop variable while counter two is global scope variaple.
+//2.counter1 is used clouser b/c functional variable can accsess outside the function.
 
 /******************************************************************************\
 	Task 2: Get Motivated
@@ -41,19 +44,21 @@ function counter2() {
 /* Inside the motivation function create another function called message that
 will return 'You're doing awesome, keep it up firstname lastname.' */
 
-function motivation(firstname, lastname) {
+function motivation(firstname,lastname) {
 
   var welcomeText = 'You\'re doing awesome, keep it up ';
 
   // code message function here.
+  function message(){
+   console.log(welcomeText)
+  }
 
 
   //Uncommment this to return the value of your invoked message function
-  //return message();
+   return message();
 
 }
-
-motivation('Mohamed', 'Ali'); // 'You're doing awesome keep it up Mohamed Ali.
+ motivation('Mohamed', 'Ali'); // 'You're doing awesome keep it up Mohamed Ali.
 
 
 /******************************************************************************\
@@ -71,14 +76,15 @@ var secondLevelFriends = ["Mahad", "Farah", "Mohamed"];
 var allUsers = ["Ahmed", "Khadijo", "Farah", "Mahad", "Mohamed", "Bashir", "Ali"];
 
 function findPotentialFriends(existingFriends) {
-
+ console.log(friends)
 }
 
-var isNotAFriend = findPotentialFriends( friends );
+var isNotAFriend = findPotentialFriends( friends );{
 // isNotAFriend(allUsers[0]); // false
+  console.log(allUsers[0], "is not Afriend  false")
 // isNotAFriend(secondLevelFriends[2]); // true
-
-
+  console.log(secondLevelFriends[2], "is not Afriend  true")
+}
 /******************************************************************************\
 	Task 4: Keep a log
 \******************************************************************************/
@@ -104,6 +110,7 @@ function timeOutCounter() {
     	console.log(i)
 	}, i * 1000)
   }
+  console.log(i)
 }
 timeOutCounter();
 
